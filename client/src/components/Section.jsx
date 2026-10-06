@@ -1,0 +1,1 @@
+export default function Section({eyebrow,title,children,action}){return <section className="section"><div className="sectionHead"><div><span className="eyebrow">{eyebrow}</span><h2>{title}</h2></div>{action}</div>{children}</section>}

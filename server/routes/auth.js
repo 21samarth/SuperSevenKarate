@@ -1,0 +1,3 @@
+import express from 'express';import bcrypt from 'bcryptjs';import jwt from 'jsonwebtoken';import Admin from '../models/Admin.js';
+const r=express.Router();
+r.post('/login',async(req,res)=>{try{const {email,password}=req.body;const a=await Admin.findOne({email});if(!a||!(await bcrypt.compare(password,a.passwordHash)))return res.status(401).json({message:'Invalid credentials'});const token=jwt.sign({id:a._id,email:a.email,role:a.role},process.env.JWT_SECRET,{expiresIn:'8h'});res.json({token,user:{email:a.email,role:a.role}})}catch(e){res.status(500).json({message:e.message})}});export default r;
