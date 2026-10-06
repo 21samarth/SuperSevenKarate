@@ -4,8 +4,23 @@ import founder from './assets/founder.webp'
 import * as D from './data.js'
 
 const wa = (text = '') => `https://wa.me/${D.WA_NUMBER}${text ? `?text=${encodeURIComponent(text)}` : ''}`
+const sendToAdminWhatsApp = (text) => window.open(wa(text), 'admin-whatsapp', 'noopener,noreferrer')
 
 const Ph = ({ label }) => <div className="ph">{label}</div>
+
+const ConfirmationDialog = ({ open, onClose }) => {
+  if (!open) return null
+
+  return (
+    <div className="dialog-backdrop" role="presentation" onMouseDown={onClose}>
+      <div className="dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-title" onMouseDown={(e) => e.stopPropagation()}>
+        <h2 id="dialog-title">Enquiry sent</h2>
+        <p>Your enquiry has been sent to the admin successfully. We will get back to you within 2 to 3 working days.</p>
+        <button className="btn" type="button" onClick={onClose}>OK</button>
+      </div>
+    </div>
+  )
+}
 
 const Card = ({ title, children, top }) => (
   <div className="card">
@@ -30,6 +45,8 @@ function Section({ id, title, sub, alt, children }) {
 const nav = [['about', 'About'], ['programs', 'Programs'], ['coaches', 'Coaches'], ['achievements', 'Achievements'], ['branches', 'Branches'], ['timings', 'Timings'], ['fees', 'Fees'], ['events', 'Events'], ['gallery', 'Gallery'], ['reviews', 'Reviews'], ['contact', 'Contact']]
 
 function Header() {
+  const [menuOpen, setMenuOpen] = useState(false)
+
   return (
     <header>
       <div className="bar">
@@ -37,8 +54,12 @@ function Header() {
           <img src={logo} alt="SSSA Karate logo" width="44" height="44" />
           Super Seven Sports Academy
         </a>
-        <nav aria-label="Main">
-          {nav.map(([id, label]) => <a key={id} href={`#${id}`}>{label}</a>)}
+        <button className="menu-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded={menuOpen} aria-controls="main-nav" onClick={() => setMenuOpen(!menuOpen)}>
+          <span></span><span></span><span></span>
+        </button>
+        <nav id="main-nav" className={menuOpen ? 'open' : undefined} aria-label="Main">
+          {nav.map(([id, label]) => <a key={id} href={`#${id}`} onClick={() => setMenuOpen(false)}>{label}</a>)}
+          <a className="btn nav-demo" href="#admission" onClick={() => setMenuOpen(false)}>Free demo</a>
         </nav>
         <a className="btn" href="#admission">Free demo</a>
       </div>
@@ -92,13 +113,13 @@ function About() {
 }
 
 function Admission() {
-  const [msg, setMsg] = useState('The form opens WhatsApp with your details filled in.')
+  const [isSubmitted, setIsSubmitted] = useState(false)
   const submit = (e) => {
     e.preventDefault()
     const d = new FormData(e.target)
-    const text = `Hi, I want a ${d.get('type')}.\nName: ${d.get('name')}\nAge: ${d.get('age')}\nProgram: ${d.get('prog')}\nPhone: ${d.get('phone')}`
-    window.open(wa(text), '_blank', 'noopener')
-    setMsg('WhatsApp opened. Send the message to complete your request.')
+    sendToAdminWhatsApp(`New ${d.get('type')} enquiry\nName: ${d.get('name')}\nAge: ${d.get('age')}\nProgram: ${d.get('prog')}\nPhone: ${d.get('phone')}`)
+    e.target.reset()
+    setIsSubmitted(true)
   }
   return (
     <section className="alt" id="admission">
@@ -112,21 +133,24 @@ function Admission() {
             <input name="phone" type="tel" placeholder="WhatsApp number" required aria-label="WhatsApp number" />
             <select name="prog" aria-label="Program">{D.programs.map(([p]) => <option key={p}>{p}</option>)}</select>
             <select name="type" aria-label="Request type"><option>Free demo class</option><option>Admission</option></select>
-            <button className="btn" type="submit">Send on WhatsApp</button>
-            <p className="note">{msg}</p>
+            <button className="btn" type="submit">Submit enquiry</button>
           </form>
         </div>
         <Card title="What to bring to the demo">Comfortable sportswear, a water bottle and a parent or guardian for students under 18. No equipment needed for the first class.</Card>
       </div>
+      <ConfirmationDialog open={isSubmitted} onClose={() => setIsSubmitted(false)} />
     </section>
   )
 }
 
 function Contact() {
+  const [isSubmitted, setIsSubmitted] = useState(false)
   const submit = (e) => {
     e.preventDefault()
     const d = new FormData(e.target)
-    window.open(wa(`Name: ${d.get('n')}\nPhone: ${d.get('p')}\n${d.get('m')}`), '_blank', 'noopener')
+    sendToAdminWhatsApp(`New website enquiry\nName: ${d.get('n')}\nPhone: ${d.get('p')}\nQuestion: ${d.get('m')}`)
+    e.target.reset()
+    setIsSubmitted(true)
   }
   return (
     <section id="contact">
@@ -140,7 +164,7 @@ function Contact() {
             <b>Email:</b> <a href={`mailto:${D.EMAIL}`}>{D.EMAIL}</a><br />
             <b>Address:</b> {D.ADDRESS}
           </p>
-          <p style={{ marginTop: 14 }}><a href="#">Instagram</a> · <a href="#">Facebook</a> · <a href="#">YouTube</a></p>
+          <p style={{ marginTop: 14 }}>follow us on : <br /><a href="https://www.instagram.com/super_seven_sports_acadmey/" target='_blank'><img width="36" height="36" src="https://img.icons8.com/3d-fluency/94/instagram-logo.png" alt="instagram-logo"/></a></p>
         </div>
         <form onSubmit={submit}>
           <input name="n" placeholder="Your name" required aria-label="Your name" />
@@ -149,6 +173,7 @@ function Contact() {
           <button className="btn" type="submit">Send enquiry</button>
         </form>
       </div>
+      <ConfirmationDialog open={isSubmitted} onClose={() => setIsSubmitted(false)} />
     </section>
   )
 }
@@ -179,7 +204,7 @@ export default function App() {
         <Section id="branches" alt title="Branches" sub="Find us and see class days.">
           <div className="grid">
             {D.branches.map(([t, p]) => (
-              <Card key={t} title={t}>{p}<br />{D.ADDRESS}<br />Coach: [Add name]<br /><a href={D.MAPS}>Open in Google Maps</a></Card>
+              <Card key={t} title={t}>{p}<br />{D.ADDRESS}<br />Coach: Divyanshi Pal / Harsh Chauchan <br /><a href={D.MAPS}><img width="32" height="32" src="https://img.icons8.com/color/48/google-maps.png" alt="google-maps" />Open in Google Maps</a></Card>
             ))}
           </div>
         </Section>
@@ -220,7 +245,11 @@ export default function App() {
         <p>© 2026 Super Seven Sports Academy, Indore. All rights reserved.</p>
         <p style={{ marginTop: 8 }}><a href="#about">About</a><a href="#programs">Programs</a><a href="#contact">Contact</a></p>
       </footer>
-      <a className="wa" href={wa()}>WhatsApp us</a>
+      <a className="wa" href={wa()} aria-label="Chat with us on WhatsApp">
+        <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <path d="M27.3 4.7A15.8 15.8 0 0 0 2.8 23.8L1 31l7.4-1.9a15.8 15.8 0 0 0 18.9-24.4ZM16 28a12 12 0 0 1-6.1-1.7l-.4-.2-4.4 1.1 1.2-4.3-.3-.4A12 12 0 1 1 16 28Zm6.6-8.9c-.4-.2-2.4-1.2-2.8-1.3-.4-.1-.7-.2-1 .2-.3.4-1.1 1.3-1.3 1.6-.2.3-.5.3-.9.1a9.7 9.7 0 0 1-2.8-1.7 10.7 10.7 0 0 1-2-2.5c-.2-.4 0-.6.1-.8l.6-.7c.2-.2.2-.4.3-.7.1-.2 0-.5 0-.7-.1-.2-1-2.3-1.3-3.1-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1 .5-.4.4-1.4 1.3-1.4 3.3s1.4 3.8 1.6 4.1c.2.3 2.8 4.3 6.8 6 .9.4 1.7.7 2.2.9.9.3 1.8.3 2.4.2.7-.1 2.4-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.2-.4-.3-.8-.5Z" />
+        </svg>
+      </a>
     </>
   )
 }
