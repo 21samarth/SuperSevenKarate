@@ -1,1 +1,0 @@
-export default function MediaCard({item}){return <article className="mediaCard">{item.image&&<img src={item.image} alt={item.title||'Super Seven Karate'} loading="lazy"/>}<div><span className="eyebrow">{item.subtitle}</span><h3>{item.title}</h3><p>{item.description}</p></div></article>}
