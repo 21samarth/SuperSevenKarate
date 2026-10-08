@@ -279,27 +279,27 @@ export function HomePage() {
           </div>
           <div className="gallery-grid reveal">
             <div className="g-item">
-              <img src="../../assets/g2.jpg" alt="Gallery Image 1" loading="lazy" />
+              <img src="/g2.jpg" alt="Gallery Image 1" loading="lazy" />
               <div className="g-placeholder">🥋</div>
               <div className="g-overlay">🔍</div>
             </div>
             <div className="g-item">
-              <img src="../../assets/g1.jpg" alt="Gallery Image 2" loading="lazy" />
+              <img src="/g1.jpg" alt="Gallery Image 2" loading="lazy" />
               <div className="g-placeholder">🏆</div>
               <div className="g-overlay">🔍</div>
             </div>
             <div className="g-item">
-              <img src="../../assets/g3.jpg" alt="Gallery Image 3" loading="lazy" />
+              <img src="/g3.jpg" alt="Gallery Image 3" loading="lazy" />
               <div className="g-placeholder">👊</div>
               <div className="g-overlay">🔍</div>
             </div>
             <div className="g-item">
-              <img src="../../assets/g4.jpg" alt="Gallery Image 4" loading="lazy" />
+              <img src="/g4.jpg" alt="Gallery Image 4" loading="lazy" />
               <div className="g-placeholder">🎌</div>
               <div className="g-overlay">🔍</div>
             </div>
             <div className="g-item">
-              <img src="../../assets/g5.jpg" alt="Gallery Image 5" loading="lazy" />
+              <img src="/g5.jpg" alt="Gallery Image 5" loading="lazy" />
               <div className="g-placeholder">⭐</div>
               <div className="g-overlay">🔍</div>
             </div>
