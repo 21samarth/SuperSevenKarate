@@ -1,5 +1,8 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// base './' makes the build work on GitHub Pages sub-paths too
-export default defineConfig({ plugins: [react()], base: './' })
+export default defineConfig({
+  plugins: [react()],
+  // Supplied academy photos, posters, and logo are served as static assets.
+  publicDir: 'assets',
+});

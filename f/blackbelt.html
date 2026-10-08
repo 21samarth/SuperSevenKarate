@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Black Belt Legacy | Wellness Karate Academy Indore</title>
+  <meta name="description" content="Meet the black belt masters and champion students of Wellness Karate Academy Indore. Our legacy of Shotokan karate excellence in Madhya Pradesh." />
+  <meta name="keywords" content="karate black belt Indore, karate masters Indore, Shotokan karate Indore, karate champions Madhya Pradesh, Wellness Karate Legacy" />
+  <meta name="author" content="Wellness Karate Academy Indore" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://wellnesskarateacademy.in/blackbelt.html" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Black Belt Legacy | Wellness Karate Academy Indore" />
+  <meta property="og:description" content="Meet the black belt masters and champion students of Wellness Karate Academy Indore. Our legacy of Shotokan karate excellence in Madhya Pradesh." />
+  <meta property="og:url" content="https://wellnesskarateacademy.in/blackbelt.html" />
+  <meta property="og:image" content="https://wellnesskarateacademy.in/images/logo.png" />
+  <meta property="og:locale" content="en_IN" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Black Belt Legacy | Wellness Karate Academy Indore" />
+  <meta name="twitter:description" content="Meet the black belt masters and champion students of Wellness Karate Academy Indore. Our legacy of Shotokan karate excellence in Madhya Pradesh." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    .legacy-section {
+      padding: 90px 0 100px;
+      background: var(--light-bg);
+      position: relative;
+      overflow: hidden;
+    }
+    .legacy-section::before {
+      content: '武';
+      position: absolute;
+      right: -60px; top: 50%;
+      transform: translateY(-50%);
+      font-family: serif;
+      font-size: 28rem;
+      color: rgba(139,0,0,0.04);
+      user-select: none;
+      pointer-events: none;
+      line-height: 1;
+    }
+    .legacy-sub-heading {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    .legacy-sub-heading-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(139,0,0,0.25));
+    }
+    .legacy-sub-heading-line.left {
+      background: linear-gradient(to left, transparent, rgba(139,0,0,0.25));
+    }
+    .legacy-sub-label {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--red);
+      white-space: nowrap;
+      border: 1px solid rgba(139,0,0,0.3);
+      padding: 5px 16px;
+    }
+    .legacy-divider {
+      margin: 72px 0 64px;
+      display: flex;
+      align-items: center;
+    }
+    .legacy-divider::before,
+    .legacy-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(242,201,76,0.4), transparent);
+    }
+    .legacy-divider-icon {
+      width: 50px; height: 50px;
+      background: var(--gold);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+      box-shadow: 0 0 20px rgba(242,201,76,0.35);
+      margin: 0 20px;
+    }
+
+    /* MASTER CARD */
+    .masters-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .master-card {
+      background: var(--white);
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.10);
+      transition: transform 0.32s cubic-bezier(.4,0,.2,1), box-shadow 0.32s cubic-bezier(.4,0,.2,1);
+      position: relative;
+    }
+    .master-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 48px rgba(0,0,0,0.18), 0 0 0 2px var(--gold);
+    }
+    .master-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+      transform: scaleX(0.35);
+      transform-origin: left;
+      transition: transform 0.35s ease;
+      z-index: 2;
+    }
+    .master-card:hover::before { transform: scaleX(1); }
+    .master-photo-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1;
+      overflow: hidden;
+      background: var(--blue-dark);
+    }
+    .master-photo-wrap img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.45s ease;
+    }
+    .master-card:hover .master-photo-wrap img { transform: scale(1.06); }
+    .dan-badge {
+      position: absolute;
+      bottom: 0; right: 0;
+      background: var(--red);
+      color: var(--white);
+      padding: 8px 14px;
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      line-height: 1.3;
+      z-index: 1;
+    }
+    .dan-badge strong {
+      display: block;
+      font-family: 'Bebas Neue', cursive;
+      font-size: 1.1rem;
+      letter-spacing: 0.08em;
+      color: var(--gold);
+    }
+    .belt-ribbon {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 8px;
+      background: repeating-linear-gradient(90deg, #0a0a0a 0px, #0a0a0a 24px, #1a1a1a 24px, #1a1a1a 48px);
+      z-index: 1;
+    }
+    .master-body { padding: 22px 24px 26px; }
+    .master-name {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 1.55rem;
+      letter-spacing: 0.04em;
+      color: var(--blue-dark);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .master-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      margin-bottom: 14px;
+    }
+    .master-meta { display: flex; flex-direction: column; gap: 7px; }
+    .master-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.83rem;
+      color: #555;
+    }
+    .meta-icon {
+      width: 28px; height: 28px;
+      background: rgba(242,201,76,0.12);
+      border: 1px solid rgba(242,201,76,0.3);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.75rem;
+      flex-shrink: 0;
+      color: var(--gold-dark);
+    }
+    .meta-text {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.82rem;
+      color: #444;
+      line-height: 1.3;
+    }
+
+    /* STUDENT CARD */
+    .students-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .student-card {
+      background: var(--white);
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.09);
+      transition: transform 0.32s cubic-bezier(.4,0,.2,1), box-shadow 0.32s cubic-bezier(.4,0,.2,1);
+      position: relative;
+    }
+    .student-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 48px rgba(0,0,0,0.16), 0 0 0 2px var(--red);
+    }
+    .student-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--red), var(--red-bright));
+      transform: scaleX(0.3);
+      transform-origin: left;
+      transition: transform 0.35s ease;
+      z-index: 2;
+    }
+    .student-card:hover::before { transform: scaleX(1); }
+    .student-photo-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1;
+      overflow: hidden;
+      background: var(--blue-dark);
+    }
+    .student-photo-wrap img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.45s ease;
+    }
+    .student-card:hover .student-photo-wrap img { transform: scale(1.06); }
+    .belt-level-badge {
+      position: absolute;
+      top: 14px; left: 14px;
+      background: rgba(0,0,0,0.75);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(242,201,76,0.4);
+      color: var(--gold);
+      padding: 5px 12px;
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      z-index: 1;
+    }
+    .student-belt-stripes {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 10px;
+      display: flex;
+      gap: 1px;
+      z-index: 1;
+    }
+    .student-belt-stripes span { flex: 1; background: var(--black); opacity: 0.9; }
+    .student-belt-stripes span.gold-stripe { background: var(--gold); opacity: 1; }
+    .student-body { padding: 20px 22px 24px; }
+    .student-name {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 1.45rem;
+      letter-spacing: 0.04em;
+      color: var(--blue-dark);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .student-rank {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 14px;
+    }
+    .student-achievement {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 12px 14px;
+      background: rgba(139,0,0,0.05);
+      border-left: 3px solid var(--red);
+    }
+    .student-achievement-icon { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+    .student-achievement-text { font-size: 0.82rem; color: #555; line-height: 1.55; }
+
+    @media (max-width: 900px) {
+      .masters-grid, .students-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px) {
+      .masters-grid, .students-grid { grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsActivityLocation",
+    "name": "Wellness Karate Academy",
+    "alternateName": "Wellness Karate Academy Indore",
+    "description": "Professional Shotokan Karate training for kids, teens and adults in Indore, Madhya Pradesh. Certified FSKAIF instructors offering karate classes, self defense and martial arts training.",
+    "url": "https://wellnesskarateacademy.in",
+    "telephone": "+919074486679",
+    "email": "vkvishal994@gmail.com",
+    "foundingDate": "2014",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Diezel gym near Barfani Dham MR9 road",
+      "addressLocality": "Indore",
+      "addressRegion": "Madhya Pradesh",
+      "postalCode": "452010",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "22.7416",
+      "longitude": "75.8972"
+    },
+    "openingHoursSpecification": [
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"06:00","closes":"21:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Sunday"],"opens":"07:00","closes":"12:00"}
+    ],
+    "priceRange": "₹₹",
+    "image": "https://wellnesskarateacademy.in/images/logo.png",
+    "sameAs": [
+      "https://www.instagram.com/wellness_karate_academy",
+      "https://www.facebook.com/vishalbokrekarateboy/",
+      "https://youtube.com/@senseivishalbokrekarate1507"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<nav class="navbar scrolled" id="navbar">
+  <div class="navbar-inner">
+    <a class='logo' href='index.html'>
+  <img src="images/logo.png" alt="Wellness Karate Academy" class="logo-img"
+  style="height:52px;width:52px;border-radius:50%;object-fit:cover;flex-shrink:0;" / loading="lazy">
+  <div class="logo-text">
+    <span class="logo-name">Wellness Karate</span>
+    <span class="logo-sub">Academy · Indore</span>
+  </div>
+</a>
+    <ul class="nav-links">
+      <li><a href='index.html'>Home</a></li>
+      <li><a href='events.html'>Events</a></li>
+      <li><a class='active' href='blackbelt.html'>Legacy</a></li>
+      <li><a href='gallery.html'>Gallery</a></li>
+      <li><a href='contact.html'>Contact Us</a></li>
+      <li><a class='btn btn-primary nav-cta' href='contact.html'>Join Now</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href='index.html'>Home</a>
+  <a href='events.html'>Events</a>
+  <a href='blackbelt.html'>Legacy</a>
+  <a href='gallery.html'>Gallery</a>
+  <a href='contact.html'>Contact Us</a>
+</div>
+
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="container page-hero-content">
+    <div class="breadcrumb">Home &rsaquo; <span>Legacy</span></div>
+    <h1 class="page-hero-title">Our <span>Legacy</span></h1>
+    <p class="page-hero-sub">Masters &nbsp;·&nbsp; Champions &nbsp;·&nbsp; Guardians of the Art</p>
+  </div>
+</section>
+
+<section class="journey-section">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:8px">
+      <div class="section-tag" style="border-left:none;border-bottom:1px solid rgba(242,201,76,0.4);padding:0 0 8px">The Black Belt Journey</div>
+    </div>
+    <h2 class="section-title light reveal" style="text-align:center">From White Belt <span>to Warrior</span></h2>
+    <div class="journey-steps">
+      <div class="journey-step reveal">
+        <div class="journey-step-num">01</div>
+        <div class="journey-step-icon">🤍</div>
+        <div class="journey-step-title">White Belt — Beginner</div>
+        <p class="journey-step-desc">The beginning of every journey. Learn foundational stances, blocks, strikes, and the core values of karate: respect, discipline, and perseverance.</p>
+      </div>
+      <div class="journey-step reveal reveal-delay-1">
+        <div class="journey-step-num">02</div>
+        <div class="journey-step-icon">🟡</div>
+        <div class="journey-step-title">Color Belts — Growth</div>
+        <p class="journey-step-desc"> Belts of different colors such as yellow, orange, green, blue, and purple, each marking growth in knowledge and technique.</p>
+      </div>
+      <div class="journey-step reveal reveal-delay-2">
+        <div class="journey-step-num">03</div>
+        <div class="journey-step-icon">🟤</div>
+        <div class="journey-step-title">Brown Belt — Pre-Black</div>
+        <p class="journey-step-desc">The brown belt in karate represents maturity, discipline, and readiness for higher responsibility. It shows that the student has developed strong technique, deep understanding, and consistent dedication to training.</p>
+      </div>
+      <div class="journey-step reveal reveal-delay-3">
+        <div class="journey-step-num">04</div>
+        <div class="journey-step-icon">⬛</div>
+        <div class="journey-step-title">Black Belt — Mastery</div>
+        <p class="journey-step-desc">The black belt in karate is a symbol of mastery, discipline, and lifelong commitment to the art. It represents not just advanced skill, but also wisdom, humility, and responsibility.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEGACY SECTION -->
+<section class="legacy-section" id="legacy">
+  <div class="container">
+
+    <div class="reveal" style="margin-bottom:56px">
+      <div class="section-tag">Hall of Excellence</div>
+      <h2 class="section-title" style="font-size:clamp(3rem,7vw,5rem)">The <span>Legacy</span></h2>
+      <p style="color:#666;font-size:.95rem;margin-top:16px;max-width:580px;line-height:1.85">From the masters who built the foundation to the students who carry the torch — this is the living legacy of Wellness Karate Academy.</p>
+    </div>
+
+    <!-- Masters sub-heading -->
+    <div class="legacy-sub-heading reveal">
+      <div class="legacy-sub-heading-line left"></div>
+      <div class="legacy-sub-label">⬛ &nbsp; Master Instructors</div>
+      <div class="legacy-sub-heading-line"></div>
+    </div>
+
+    <!-- Masters grid -->
+    <div class="masters-grid">
+
+      <div class="master-card reveal">
+        <div class="master-photo-wrap">
+          <img src="images/master1.jpg" alt="Sensei Vishal Bokre" / loading="lazy">
+          <div class="belt-ribbon"></div>
+          <div class="dan-badge"><strong>4th Dan </strong>Black Belt</div>
+        </div>
+        <div class="master-body">
+          <div class="master-name">Sensei Vishal Bokre</div>
+          <div class="master-title">Chief Instructor &amp; Founder</div>
+          <div class="master-meta">
+            <div class="master-meta-item"><div class="meta-icon">🎖️</div><div class="meta-text">4th Dan Black Belt — Shotokan</div></div>
+            <div class="master-meta-item"><div class="meta-icon">⏳</div><div class="meta-text">17+ Years of Experience</div></div>
+            <div class="master-meta-item"><div class="meta-icon">🏆</div><div class="meta-text">FSKAIF Certified Head Coach</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="master-card reveal reveal-delay-1">
+        <div class="master-photo-wrap">
+          <img src="images/master2.png" alt="Sensei Deepak Khare" / loading="lazy">
+          <div class="belt-ribbon"></div>
+          <div class="dan-badge"><strong>5th Dan</strong>Black Belt</div>
+        </div>
+        <div class="master-body">
+          <div class="master-name">Sensei Deepak Khare</div>
+          <div class="master-title">Senior Instructor &amp; official examiner</div>
+          <div class="master-meta">
+            <div class="master-meta-item"><div class="meta-icon">🎖️</div><div class="meta-text">5th Dan Black Belt — Shotokan</div></div>
+            <div class="master-meta-item"><div class="meta-icon">⏳</div><div class="meta-text">35+ Years of Experience</div></div>
+            <div class="master-meta-item"><div class="meta-icon">🏆</div><div class="meta-text">FSKAIF Certified Head Coach</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="master-card reveal reveal-delay-2">
+        <div class="master-photo-wrap">
+          <img src="images/master3.jpg" alt="Sempai Kiran Lama" / loading="lazy">
+          <div class="belt-ribbon"></div>
+          <div class="dan-badge"><strong>1st Dan</strong>Black Belt</div>
+        </div>
+        <div class="master-body">
+          <div class="master-name">Sempai Kiran Lama</div>
+          <div class="master-title">Girls &amp; Female Head Coach</div>
+          <div class="master-meta">
+            <div class="master-meta-item"><div class="meta-icon">🎖️</div><div class="meta-text">1st Dan Black Belt — Shotokan</div></div>
+            <div class="master-meta-item"><div class="meta-icon">⏳</div><div class="meta-text">6+ Years of Experience</div></div>
+            <div class="master-meta-item"><div class="meta-icon">🏆</div><div class="meta-text">FSKAIF Certified Assistant Coach</div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Divider -->
+    <div class="legacy-divider reveal">
+      <div class="legacy-divider-icon">🥋</div>
+    </div>
+
+    <!-- Students sub-heading -->
+    <div class="legacy-sub-heading reveal">
+      <div class="legacy-sub-heading-line left"></div>
+      <div class="legacy-sub-label">⭐ &nbsp; Black Belt Students</div>
+      <div class="legacy-sub-heading-line"></div>
+    </div>
+
+    <!-- Students grid -->
+    <div class="students-grid">
+
+      <!-- Student 1 -->
+      <div class="student-card reveal">
+        <div class="student-photo-wrap">
+          <img src="images/champ1.jpg" alt="Arul Jain" / loading="lazy">
+          <div class="belt-level-badge">1st Dan</div>
+          <div class="student-belt-stripes"><span></span><span></span><span></span><span class="gold-stripe"></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="student-body">
+          <div class="student-name">Arul Jain</div>
+          <div class="student-rank">Black Belt — 1st Dan</div>
+          <div class="student-achievement">
+            <div class="student-achievement-icon">🥇</div>
+            <div class="student-achievement-text">Khel Karate season 3 Gold medalist</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Student 2 -->
+      <div class="student-card reveal reveal-delay-1">
+        <div class="student-photo-wrap">
+          <img src="images/champ2.jpg" alt="Nandita Lama" / loading="lazy">
+          <div class="belt-level-badge">2nd Dan</div>
+          <div class="student-belt-stripes"><span></span><span></span><span></span><span class="gold-stripe"></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="student-body">
+          <div class="student-name">Nandita Lama</div>
+          <div class="student-rank">Black Belt — 2nd Dan</div>
+          <div class="student-achievement">
+            <div class="student-achievement-icon">🏅</div>
+            <div class="student-achievement-text">Khel karate season 3 Silver medalist</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Student 3 -->
+      <div class="student-card reveal reveal-delay-2">
+        <div class="student-photo-wrap">
+          <img src="images/champ3.jpg" alt="Smruthi T.K." / loading="lazy">
+          <div class="belt-level-badge">3rd Dan</div>
+          <div class="student-belt-stripes"><span></span><span class="gold-stripe"></span><span></span><span></span><span class="gold-stripe"></span><span></span></div>
+        </div>
+        <div class="student-body">
+          <div class="student-name">Smruthi T.K.</div>
+          <div class="student-rank">Black Belt — 3rd Dan</div>
+          <div class="student-achievement">
+            <div class="student-achievement-icon">🌐</div>
+            <div class="student-achievement-text">FSKA International gold medalist</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Student 4 — Add photo: images/champ4.jpg -->
+      <div class="student-card reveal">
+        <div class="student-photo-wrap">
+          <img src="images/champ4.jpeg" alt="Tavish Samdani" / loading="lazy">
+          <div class="belt-level-badge">2nd Dan</div>
+          <div class="student-belt-stripes"><span></span><span></span><span></span><span class="gold-stripe"></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="student-body">
+          <div class="student-name">Tavish Samdani</div>
+          <div class="student-rank">Black Belt — 2nd Dan</div>
+          <div class="student-achievement">
+            <div class="student-achievement-icon">🥋</div>
+            <div class="student-achievement-text">FSKAIF National gold medalist</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Student 5 — Add photo: images/champ5.jpg -->
+      <div class="student-card reveal reveal-delay-1">
+        <div class="student-photo-wrap">
+          <img src="images/champ5.jpeg" alt="Muskan Maheshwari" / loading="lazy">
+          <div class="belt-level-badge">2nd Dan</div>
+          <div class="student-belt-stripes"><span></span><span></span><span></span><span class="gold-stripe"></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="student-body">
+          <div class="student-name">Muskan Maheshwari</div>
+          <div class="student-rank">Black Belt — 2nd Dan</div>
+          <div class="student-achievement">
+            <div class="student-achievement-icon">🥋</div>
+            <div class="student-achievement-text">FSKAIF National gold medalist</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Student 6 — Add photo: images/champ6.jpg -->
+      <div class="student-card reveal reveal-delay-2">
+        <div class="student-photo-wrap">
+          <img src="images/champ6.jpeg" alt="Yashashvi Lama" / loading="lazy">
+          <div class="belt-level-badge">1st Dan</div>
+          <div class="student-belt-stripes"><span></span><span></span><span></span><span class="gold-stripe"></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="student-body">
+          <div class="student-name">Yashashvi Lama</div>
+          <div class="student-rank">Black Belt — 1st Dan</div>
+          <div class="student-achievement">
+            <div class="student-achievement-icon">🥋</div>
+            <div class="student-achievement-text">FSKAIF National gold medalist</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Black Belt Student List Download -->
+    <div class="reveal" style="text-align:center;margin-top:56px;">
+      <a href="images/black_belt_list.pdf" download="Wellness_Karate_BlackBelt_List.pdf" class="btn btn-primary" style="font-size:1rem;padding:16px 40px;display:inline-flex;align-items:center;gap:12px;">
+        <span>⬇️</span> Black Belt Student List
+      </a>
+      <p style="margin-top:14px;font-size:0.82rem;color:#888;font-family:'Poppins',sans-serif;">
+        Click to download the complete list of all black belt holders
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section style="padding:80px 0;background:var(--blue-dark);text-align:center">
+  <div class="container reveal">
+    <div class="section-tag" style="border-left:none;border-bottom:1px solid rgba(242,201,76,0.4);padding:0 0 8px;margin-bottom:20px">Your Turn</div>
+    <h2 class="section-title light" style="margin-bottom:20px">Write Your Own <span>Legacy</span></h2>
+    <p style="color:rgba(255,255,255,.55);font-size:.95rem;max-width:520px;margin:0 auto 40px;line-height:1.8">Every master was once a beginner. Every champion started with a single step. Let us guide yours.</p>
+    <a class='btn btn-primary' href='contact.html' style='font-size:1rem;padding:16px 40px'>Join the Academy ›</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class='logo' href='index.html'>
+  <img src="images/logo.png" alt="Wellness Karate Academy" class="logo-img"
+  style="height:52px;width:52px;border-radius:50%;object-fit:cover;flex-shrink:0;" / loading="lazy">
+  <div class="logo-text">
+    <span class="logo-name">Wellness Karate</span>
+    <span class="logo-sub">Academy · Indore</span>
+  </div>
+</a>
+        <p>Building champions of character since 2014.</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/wellness_karate_academy" class="social-link" title="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="ig" cx="30%" cy="107%" r="150%"><stop offset="0%" stop-color="#fdf497"/><stop offset="5%" stop-color="#fdf497"/><stop offset="45%" stop-color="#fd5949"/><stop offset="60%" stop-color="#d6249f"/><stop offset="90%" stop-color="#285AEB"/></radialGradient></defs><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="url(#ig)"/><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="none"/><circle cx="12" cy="12" r="4" fill="none" stroke="white" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1" fill="white"/></svg></a>
+          <a href="https://www.facebook.com/vishalbokrekarateboy/" class="social-link" title="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="4" fill="#1877F2"/><path d="M16 8h-2a1 1 0 0 0-1 1v2h3l-.5 3H13v7h-3v-7H8v-3h2V9a4 4 0 0 1 4-4h2v3z" fill="white"/></svg></a>
+          <a href="https://youtube.com/@senseivishalbokrekarate1507" class="social-link" title="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="4" fill="#FF0000"/><path d="M19.6 7.8a2 2 0 0 0-1.4-1.4C16.8 6 12 6 12 6s-4.8 0-6.2.4A2 2 0 0 0 4.4 7.8 20 20 0 0 0 4 12a20 20 0 0 0 .4 4.2 2 2 0 0 0 1.4 1.4C7.2 18 12 18 12 18s4.8 0 6.2-.4a2 2 0 0 0 1.4-1.4A20 20 0 0 0 20 12a20 20 0 0 0-.4-4.2z" fill="white"/><polygon points="10,9 10,15 15,12" fill="#FF0000"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href='index.html'>Home</a></li>
+          <li><a href='events.html'>Events</a></li>
+          <li><a href='blackbelt.html'>Legacy</a></li>
+          <li><a href='gallery.html'>Gallery</a></li>
+          <li><a href='contact.html'>Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Programs</div>
+        <ul class="footer-links">
+          <li><a href="blackbelt.html#">Kids Karate</a></li>
+          <li><a href="blackbelt.html#">Teen Karate</a></li>
+          <li><a href="blackbelt.html#">Adult Karate</a></li>
+          <li><a href="blackbelt.html#">Self Defense</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-item-icon">📍</div>
+            <div class="contact-item-text">Diezel gym near Barfani Dham MR9 road,<br>Indore, MP 452010</div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📞</div>
+            <div class="contact-item-text"><a href="tel:+919074486679" style="color:inherit;text-decoration:none;">+91 9074486679</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Wellness Karate Academy Indore. All Rights Reserved.</div>
+    </div>
+  </div>
+      <p style="font-size:0.72rem;color:rgba(255,255,255,0.25);font-family:'Oswald',sans-serif;letter-spacing:0.05em;margin-top:8px;">
+        Wellness Karate Academy · Indore, Madhya Pradesh, India<br>
+        Karate Training &nbsp;|&nbsp; Martial Arts &nbsp;|&nbsp; Self Defense Classes
+      </p>
+</footer>
+
+<script src="https://wellnesskarateacademy.com/js/images.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
