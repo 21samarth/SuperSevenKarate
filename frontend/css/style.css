@@ -41,6 +41,77 @@ img { max-width: 100%; display: block; }
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 
+/* Founder and co-founder cards on the Legacy page */
+.founders-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.founders-grid .master-card:nth-child(n + 3) { display: none; }
+
+.master-card {
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid rgba(13, 27, 42, 0.12);
+  box-shadow: 0 12px 30px rgba(13, 27, 42, 0.12);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.master-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 38px rgba(13, 27, 42, 0.2);
+}
+
+.master-photo-wrap { position: relative; height: 310px; background: var(--blue-dark); }
+.master-photo-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.belt-ribbon { position: absolute; right: 0; bottom: 0; left: 0; height: 8px; background: var(--black); }
+.dan-badge {
+  position: absolute; top: 16px; right: 16px; padding: 7px 10px;
+  color: var(--white); background: rgba(13, 27, 42, 0.88); font: 0.75rem 'Oswald', sans-serif;
+  letter-spacing: .05em; text-transform: uppercase;
+}
+.dan-badge strong { color: var(--gold); margin-right: 4px; }
+.master-body { padding: 24px; }
+.master-name { color: var(--blue-dark); font: 2rem/1 'Bebas Neue', cursive; letter-spacing: .03em; }
+.master-title { margin-top: 8px; color: var(--red); font: 600 .8rem 'Oswald', sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+.master-meta { display: grid; gap: 12px; margin-top: 22px; }
+.master-meta-item { display: flex; align-items: center; gap: 10px; color: #555; font-size: .85rem; }
+.meta-icon { width: 22px; text-align: center; }
+
+/* The legacy markup retains its older credential strings; display the current
+   founder details supplied for these two cards. */
+.founders-grid .master-card:nth-child(-n + 2) .master-meta-item:nth-child(1) .meta-text,
+.founders-grid .master-card:nth-child(-n + 2) .master-meta-item:nth-child(2) .meta-text { font-size: 0; }
+.founders-grid .master-card:nth-child(-n + 2) .master-meta-item:nth-child(1) .meta-text::after { content: 'Shodan Black Belt'; font-size: .85rem; }
+.founders-grid .master-card:nth-child(-n + 2) .master-meta-item:nth-child(2) .meta-text::after { content: '8+ Years of Experience'; font-size: .85rem; }
+.legacy-sub-label{
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--red);
+  white-space: nowrap;
+  border: 1px solid rgba(139, 0, 0, 0.3);
+  padding: 5px 16px;
+}
+reveal.animate-ready.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.legacy-sub-heading {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+@media (max-width: 640px) {
+  .founders-grid { grid-template-columns: 1fr; max-width: 420px; }
+  .master-photo-wrap { height: 340px; }
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;

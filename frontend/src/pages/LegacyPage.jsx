@@ -93,60 +93,60 @@ export function LegacyPage() {
           </div>
       
           {/* Masters grid */}
-          <div className="masters-grid">
-      
-            <div className="master-card reveal">
-              <div className="master-photo-wrap">
-                <img src="/master1.jpg" alt="Sensei Vishal Bokre" loading="lazy" />
-                <div className="belt-ribbon"></div>
-                <div className="dan-badge"><strong>4th Dan </strong>Black Belt</div>
-              </div>
-              <div className="master-body">
-                <div className="master-name">Sensei Vishal Bokre</div>
-                <div className="master-title">Chief Instructor &amp; Founder</div>
-                <div className="master-meta">
-                  <div className="master-meta-item"><div className="meta-icon">🎖️</div><div className="meta-text">4th Dan Black Belt — Shotokan</div></div>
-                  <div className="master-meta-item"><div className="meta-icon">⏳</div><div className="meta-text">17+ Years of Experience</div></div>
-                  <div className="master-meta-item"><div className="meta-icon">🏆</div><div className="meta-text">FSKAIF Certified Head Coach</div></div>
-                </div>
-              </div>
-            </div>
-      
-            <div className="master-card reveal reveal-delay-1">
-              <div className="master-photo-wrap">
-                <img src="/master2.png" alt="Sensei Deepak Khare" loading="lazy" />
-                <div className="belt-ribbon"></div>
-                <div className="dan-badge"><strong>5th Dan</strong>Black Belt</div>
-              </div>
-              <div className="master-body">
-                <div className="master-name">Sensei Deepak Khare</div>
-                <div className="master-title">Senior Instructor &amp; official examiner</div>
-                <div className="master-meta">
-                  <div className="master-meta-item"><div className="meta-icon">🎖️</div><div className="meta-text">5th Dan Black Belt — Shotokan</div></div>
-                  <div className="master-meta-item"><div className="meta-icon">⏳</div><div className="meta-text">35+ Years of Experience</div></div>
-                  <div className="master-meta-item"><div className="meta-icon">🏆</div><div className="meta-text">FSKAIF Certified Head Coach</div></div>
-                </div>
-              </div>
-            </div>
-      
-            <div className="master-card reveal reveal-delay-2">
-              <div className="master-photo-wrap">
-                <img src="/master3.jpg" alt="Sempai Kiran Lama" loading="lazy" />
-                <div className="belt-ribbon"></div>
-                <div className="dan-badge"><strong>1st Dan</strong>Black Belt</div>
-              </div>
-              <div className="master-body">
-                <div className="master-name">Sempai Kiran Lama</div>
-                <div className="master-title">Girls &amp; Female Head Coach</div>
-                <div className="master-meta">
-                  <div className="master-meta-item"><div className="meta-icon">🎖️</div><div className="meta-text">1st Dan Black Belt — Shotokan</div></div>
-                  <div className="master-meta-item"><div className="meta-icon">⏳</div><div className="meta-text">6+ Years of Experience</div></div>
-                  <div className="master-meta-item"><div className="meta-icon">🏆</div><div className="meta-text">FSKAIF Certified Assistant Coach</div></div>
-                </div>
-              </div>
-            </div>
-      
+          <div className="masters-grid founders-grid">
+
+      <div className="master-card reveal animate-ready visible">
+        <div class="master-photo-wrap">
+          <img src="/founder.jpg" alt="Sensei Divyamshi Pal" loading="lazy"/>
+          <div class="belt-ribbon"></div>
+          <div class="dan-badge"><strong>Shodan</strong> Black Belt</div>
+        </div>
+        <div class="master-body">
+          <div class="master-name">Sensei Divyamshi Pal</div>
+          <div class="master-title">Founder</div>
+          <div class="master-meta">
+            <div class="master-meta-item"><div class="meta-icon">🎖️</div><div class="meta-text">4th Dan Black Belt — Shotokan</div></div>
+            <div class="master-meta-item"><div class="meta-icon">⏳</div><div class="meta-text">17+ Years of Experience</div></div>
+            <div class="master-meta-item"><div class="meta-icon">🏆</div><div class="meta-text">FSKAIF Certified Head Coach</div></div>
           </div>
+        </div>
+      </div>
+
+      <div className="master-card reveal reveal-delay-1 animate-ready visible">
+        <div class="master-photo-wrap">
+          <img src="/co-founder.jpg" alt="Sensei Harsh Chouhan" loading="lazy"/>
+          <div class="belt-ribbon"></div>
+          <div class="dan-badge"><strong>Shodan</strong> Black Belt</div>
+        </div>
+        <div class="master-body">
+          <div class="master-name">Sensei Harsh Chouhan</div>
+          <div class="master-title">Co-Founder</div>
+          <div class="master-meta">
+            <div class="master-meta-item"><div class="meta-icon">🎖️</div><div class="meta-text">5th Dan Black Belt — Shotokan</div></div>
+            <div class="master-meta-item"><div class="meta-icon">⏳</div><div class="meta-text">35+ Years of Experience</div></div>
+            <div class="master-meta-item"><div class="meta-icon">🏆</div><div class="meta-text">FSKAIF Certified Head Coach</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="master-card reveal reveal-delay-2 animate-ready visible">
+        <div class="master-photo-wrap">
+          <img src="images/founder.jpg" alt="Sempai Kiran Lama" loading="lazy"/>
+          <div class="belt-ribbon"></div>
+          <div class="dan-badge"><strong>1st Dan</strong>Black Belt</div>
+        </div>
+        <div class="master-body">
+          <div class="master-name">Sempai Kiran Lama</div>
+          <div class="master-title">Girls &amp; Female Head Coach</div>
+          <div class="master-meta">
+            <div class="master-meta-item"><div class="meta-icon">🎖️</div><div class="meta-text">1st Dan Black Belt — Shotokan</div></div>
+            <div class="master-meta-item"><div class="meta-icon">⏳</div><div class="meta-text">6+ Years of Experience</div></div>
+            <div class="master-meta-item"><div class="meta-icon">🏆</div><div class="meta-text">FSKAIF Certified Assistant Coach</div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
       
           {/* Divider */}
           <div className="legacy-divider reveal">

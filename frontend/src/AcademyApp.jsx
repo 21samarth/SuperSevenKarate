@@ -115,8 +115,8 @@ function useLegacyInteractions(root, route) {
       if (!valid) return;
       const interest = form.querySelector('#interest')?.value || 'Not specified';
       const text = encodeURIComponent(`*New Enquiry — Super Seven Sports Academy*\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Email:* ${email}\n*Interested In:* ${interest}\n\n*Message:*\n${message}`);
-      window.open(`https://wa.me/919200991960?text=${text}`, '_blank', 'noopener');
-      const button = form.querySelector('[type="submit"]'); if (button) { button.textContent = '✓ Enquiry Sent!'; button.disabled = true; window.setTimeout(() => { button.textContent = 'Send Message ›'; button.disabled = false; form.reset(); }, 4000); }
+      // Direct navigation keeps the WhatsApp hand-off reliable in browsers that block pop-ups.
+      window.location.href = `https://wa.me/919200991960?text=${text}`;
     });
     return () => { closeMenu(); closeLightbox(); cleanups.forEach((cleanup) => cleanup()); };
   }, [root, route]);
