@@ -79,7 +79,7 @@ export function HomePage() {
             <div className="hero-image-frame">
               <div className="hero-img-placeholder" style={{"position": "relative"}}>
                 <span className="kanji-bg">空手</span>
-                <img src="/founder.jpg" alt="Karate Training" style={{"width": "100%", "height": "100%", "objectFit": "cover", "position": "absolute", "top": "0", "left": "0"}} loading="lazy" />
+                <img src="/founder.jpg" alt="Karate Training" style={{"width": "100%", "height": "95%", "objectFit": "cover", "position": "absolute", "top": "0", "left": "0"}} loading="lazy" />
               </div>
               <div className="floating-badge top-right">
                 <div className="fb-label">Rank</div>
