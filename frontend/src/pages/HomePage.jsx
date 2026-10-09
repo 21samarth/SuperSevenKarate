@@ -117,7 +117,7 @@ export function HomePage() {
                 <h3>Sensai Divyanshi Pal</h3>
                 <p className="home-coach-role">Owner &amp; Founder · MP Coach</p>
                 <ul className="home-coach-awards">
-                  <li>4th Dan Black Belt — Shotokan</li>
+                  <li>Black Belt — Shotokan</li>
                   <li>8+ Years of Experience</li>
                   <li>FSKAIF Certified Head Coach</li>
                   <li>Maa Ahilya National Awardee</li>
@@ -132,7 +132,7 @@ export function HomePage() {
                 <h3>Sensai Harsh Chouhan</h3>
                 <p className="home-coach-role">Co-Founder · MP Coach</p>
                 <ul className="home-coach-awards">
-                  <li>5th Dan Black Belt — Shotokan</li>
+                  <li>Black Belt — Shotokan</li>
                   <li>8+ Years of Experience</li>
                   <li>FSKAIF Certified Head Coach</li>
                 </ul>
@@ -248,8 +248,8 @@ export function HomePage() {
               <div className="event-img">
                 <img src="/event1.jpg" alt="District Championship" style={{"width": "100%", "height": "100%", "objectFit": "cover"}} />
                 <div className="event-date-badge">
-                  <div className="event-date-day">12</div>
-                  <div className="event-date-month">July</div>
+                  <div className="event-date-day">22/29</div>
+                  <div className="event-date-month">Nov</div>
                 </div>
               </div>
               <div className="event-body">
@@ -264,8 +264,8 @@ export function HomePage() {
               <div className="event-img">
                 <img src="/event3.jpg" alt="District Championship" style={{"width": "100%", "height": "100%", "objectFit": "cover"}} loading="lazy" />
                 <div className="event-date-badge">
-                  <div className="event-date-day">16</div>
-                  <div className="event-date-month">Aug</div>
+                  <div className="event-date-day">Upcoming</div>
+                  <div className="event-date-month">Dec</div>
                 </div>
               </div>
               <div className="event-body">
