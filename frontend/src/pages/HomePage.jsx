@@ -112,11 +112,14 @@ export function HomePage() {
           </div>
           <div className="home-coaches-grid">
             <article className="home-coach-card reveal">
-              <img src="/founder.jpg" alt="Sensai Divyamshi Pal" loading="lazy" />
+              <img src="/founder.jpg" alt="Sensai Divyanshi Pal" loading="lazy" />
               <div className="home-coach-body">
-                <h3>Sensai Divyamshi Pal</h3>
+                <h3>Sensai Divyanshi Pal</h3>
                 <p className="home-coach-role">Owner &amp; Founder · MP Coach</p>
                 <ul className="home-coach-awards">
+                  <li>4th Dan Black Belt — Shotokan</li>
+                  <li>8+ Years of Experience</li>
+                  <li>FSKAIF Certified Head Coach</li>
                   <li>Maa Ahilya National Awardee</li>
                   <li>Pride of MP Awardee</li>
                   <li>Young Entrepreneurs Awardee</li>
@@ -128,6 +131,11 @@ export function HomePage() {
               <div className="home-coach-body">
                 <h3>Sensai Harsh Chouhan</h3>
                 <p className="home-coach-role">Co-Founder · MP Coach</p>
+                <ul className="home-coach-awards">
+                  <li>5th Dan Black Belt — Shotokan</li>
+                  <li>8+ Years of Experience</li>
+                  <li>FSKAIF Certified Head Coach</li>
+                </ul>
               </div>
             </article>
           </div>
@@ -224,8 +232,8 @@ export function HomePage() {
               <div className="event-img">
                 <img src="/event2.jpg" alt="District Championship" style={{"width": "100%", "height": "100%", "objectFit": "cover"}} loading="lazy" />
                 <div className="event-date-badge">
-                  <div className="event-date-day">20</div>
-                  <div className="event-date-month">Sep</div>
+                  <div className="event-date-day">24</div>
+                  <div className="event-date-month">Jan</div>
                 </div>
               </div>
               <div className="event-body">

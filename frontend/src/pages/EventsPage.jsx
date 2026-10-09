@@ -31,8 +31,8 @@ export function EventsPage() {
               <div className="event-img">
                 <img src="/event2.jpg" alt="Belt Promotion Test" style={{"width": "100%", "height": "100%", "objectFit": "cover"}} loading="lazy" />
                 <div className="event-date-badge">
-                  <div className="event-date-day">20</div>
-                  <div className="event-date-month">Sep</div>
+                  <div className="event-date-day">24</div>
+                  <div className="event-date-month">Jan</div>
                 </div>
               </div>
               <div className="event-body">
@@ -48,8 +48,8 @@ export function EventsPage() {
               <div className="event-img">
                 <img src="/event1.jpg" alt="District Karate Championship" style={{"width": "100%", "height": "100%", "objectFit": "cover"}} loading="lazy" />
                 <div className="event-date-badge">
-                  <div className="event-date-day">12</div>
-                  <div className="event-date-month">July</div>
+                  <div className="event-date-day">22/29</div>
+                  <div className="event-date-month">Nov</div>
                 </div>
               </div>
               <div className="event-body">
@@ -65,8 +65,8 @@ export function EventsPage() {
               <div className="event-img">
                 <img src="/event3.jpg" alt="State Karate Championship" style={{"width": "100%", "height": "100%", "objectFit": "cover"}} loading="lazy" />
                 <div className="event-date-badge">
-                  <div className="event-date-day">16</div>
-                  <div className="event-date-month">Aug</div>
+                  <div className="event-date-day">upcoming</div>
+                  <div className="event-date-month">Dec</div>
                 </div>
               </div>
               <div className="event-body">

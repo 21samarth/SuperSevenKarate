@@ -72,12 +72,12 @@ export function LegacyPage() {
 
       <div className="master-card reveal animate-ready visible">
         <div class="master-photo-wrap">
-          <img src="/founder.jpg" alt="Sensai Divyamshi Pal" loading="lazy" style={{position:"absolute",objectFit:"contain"}}/>
+          <img src="/founder.jpg" alt="Sensai Divyanshi Pal" loading="lazy" style={{position:"absolute",objectFit:"contain"}}/>
           <div class="belt-ribbon"></div>
           <div class="dan-badge"><strong>Shodan</strong> Black Belt</div>
         </div>
         <div class="master-body">
-          <div class="master-name">Sensai Divyamshi Pal</div>
+          <div class="master-name">Sensai Divyanshi Pal</div>
           <div class="master-title">Owner & Founder · MP Coach</div>
           <div class="master-meta">
             <div class="master-meta-item"><div class="meta-icon">🎖️</div><div class="meta-text">4th Dan Black Belt — Shotokan</div></div>
