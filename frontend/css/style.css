@@ -35,12 +35,87 @@ body {
   color: var(--black);
   overflow-x: hidden;
   line-height: 1.6;
+} 
+.student-card:hover {
+    transform: scale(1.06);
+}
+.legacy-divider-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+    box-shadow: 0 0 20px rgba(242, 201, 76, 0.35);
+    margin: auto;
+}
+.belt-level-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(242, 201, 76, 0.4);
+    color: var(--gold);
+    padding: 5px 12px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    z-index: 1;
+}
+.student-name {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.45rem;
+    letter-spacing: 0.04em;
+    color: var(--blue-dark);
+    line-height: 1;
+    margin-bottom: 4px;
+}
+.student-rank {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 14px;
 }
 
+.student-achievement {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 14px;
+    background: rgba(139, 0, 0, 0.05);
+    border-left: 3px solid var(--red);
+}
+.student-achievement-text {
+    font-size: 0.82rem;
+    color: #555;
+    line-height: 1.55;
+}
+.student-body {
+    color: var(--white);
+    padding: 20px 22px 24px;
+}
+.student-photo-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.45s ease;
+}
 img { max-width: 100%; display: block; }
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
-
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 /* Founder and co-founder cards on the Legacy page */
 .founders-grid {
   display: grid;
@@ -97,7 +172,7 @@ ul { list-style: none; }
   border: 1px solid rgba(139, 0, 0, 0.3);
   padding: 5px 16px;
 }
-reveal.animate-ready.visible {
+.reveal.animate-ready.visible {
     opacity: 1;
     transform: translateY(0);
 }
@@ -106,6 +181,16 @@ reveal.animate-ready.visible {
     align-items: center;
     gap: 20px;
     margin-bottom: 40px;
+}
+.legacy-divider {
+    margin: 72px 0 64px;
+    display: flex;
+    align-items: center;
+}
+.students-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
 }
 @media (max-width: 640px) {
   .founders-grid { grid-template-columns: 1fr; max-width: 420px; }
