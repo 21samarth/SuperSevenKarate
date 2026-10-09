@@ -27,8 +27,8 @@ export function HomePage() {
             </div>
             <div className="hero-stats">
               <div className="stat">
-                <div className="ach-num" data-count="12">8+</div>
-                <div className="stat-label">Years of Excellence</div>
+                <div className="ach-num" data-count="8">8+</div>
+                <div className="stat-label">Years of Experience</div>
               </div>
               <div className="stat">
                 <div className="ach-num" data-count="400">400+</div>
@@ -36,7 +36,7 @@ export function HomePage() {
               </div>
               <div className="stat">
                 <div className="ach-num" data-count="50">30+</div>
-                <div className="stat-label">Black Belts</div>
+                <div className="stat-label">Black Belt Students</div>
               </div>
               <div className="stat">
                 <div className="ach-num" data-count="300">300+</div>
@@ -79,7 +79,7 @@ export function HomePage() {
               <div className="about-img-accent"></div>
               <div className="about-exp-badge">
                 <div className="about-exp-num">8+</div>
-                <div className="about-exp-text">Years of<br />Excellence</div>
+                <div className="about-exp-text">Years of<br />Experience</div>
               </div>
             </div>
             <div className="about-content reveal reveal-delay-2">
@@ -190,7 +190,7 @@ export function HomePage() {
               </div>
               <div className="achievement-item">
                 <div className="ach-num" data-count="8">8+</div>
-                <div className="ach-label">Years Experience</div>
+                <div className="ach-label">Years of Experience</div>
               </div>
               <div className="achievement-item">
                 <div className="ach-num" data-count="400">400+</div>
