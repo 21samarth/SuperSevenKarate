@@ -62,8 +62,8 @@ export function ContactPage() {
                 <div>
                   <div className="contact-detail-label">Training Hours</div>
                   <div className="contact-detail-value">
-                    Mon–Sat: 6 AM – 9 PM<br />
-                    Sun: 7 AM – 12 PM
+                    Monday to Friday<br />
+                    6:30 to 7:30 AM &amp; 5:00 to 6:30 PM
                   </div>
                 </div>
               </div>

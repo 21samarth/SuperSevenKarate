@@ -1124,6 +1124,24 @@ ul { list-style: none; }
   margin-bottom: 20px;
 }
 
+/* Home coaches and training schedule */
+.home-coaches { padding: 100px 0; background: var(--light-bg); }
+.home-coaches-heading { text-align: center; margin-bottom: 42px; }
+.home-coaches-heading .section-tag { display: inline-block; }
+.home-coaches-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; max-width: 900px; margin: 0 auto 32px; }
+.home-coach-card { display: grid; grid-template-columns: 150px 1fr; min-height: 190px; background: var(--white); box-shadow: var(--shadow); border-bottom: 3px solid var(--gold); overflow: hidden; }
+.home-coach-card > img { width: 100%; height: 100%; object-fit: cover; }
+.home-coach-body { padding: 22px; }
+.home-coach-body h3 { color: var(--blue-dark); font: 1.7rem/1 'Bebas Neue', cursive; letter-spacing: .04em; }
+.home-coach-role { margin-top: 7px; color: var(--gold-dark); font: .72rem/1.4 'Oswald', sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+.home-coach-awards { margin: 16px 0 0; padding: 0; list-style: none; color: var(--gray); font-size: .78rem; line-height: 1.7; }
+.home-coach-awards li::before { content: '•'; color: var(--gold-dark); margin-right: 7px; }
+.training-schedule { display: grid; grid-template-columns: repeat(3, 1fr); max-width: 900px; margin: 0 auto; background: var(--blue-dark); color: var(--white); }
+.training-schedule div { padding: 22px 28px; text-align: center; border-right: 1px solid rgba(255,255,255,.17); }
+.training-schedule div:last-child { border-right: 0; }
+.training-schedule span { display: block; color: var(--gold); font: .72rem 'Oswald', sans-serif; letter-spacing: .16em; text-transform: uppercase; }
+.training-schedule strong { display: block; margin-top: 7px; font: 1.15rem 'Oswald', sans-serif; letter-spacing: .03em; }
+
 .credentials {
   display: flex;
   flex-direction: column;
@@ -2319,4 +2337,19 @@ footer {
 html { scroll-behavior: smooth; -webkit-overflow-scrolling: touch; }
 a, button, .btn, .filter-btn, .gallery-item, .event-card, .program-card {
   touch-action: manipulation;
+}
+
+@media (max-width: 768px) {
+  .home-coaches { padding: 64px 0; }
+  .home-coaches-grid { grid-template-columns: 1fr; }
+  .training-schedule { grid-template-columns: 1fr; }
+  .training-schedule div { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.17); }
+  .training-schedule div:last-child { border-bottom: 0; }
+}
+
+@media (max-width: 440px) {
+  .home-coach-card { grid-template-columns: 120px 1fr; }
+  .home-coach-body { padding: 18px 14px; }
+  .home-coach-body h3 { font-size: 1.45rem; }
+  .home-coach-role { letter-spacing: .08em; }
 }

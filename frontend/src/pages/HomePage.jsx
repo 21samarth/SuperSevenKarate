@@ -103,6 +103,42 @@ export function HomePage() {
         </div>
       </section>
       
+      {/* ── COACHES & SCHEDULE ── */}
+      <section className="home-coaches">
+        <div className="container">
+          <div className="home-coaches-heading reveal">
+            <div className="section-tag">Train With Us</div>
+            <h2 className="section-title">Meet Your <span>Coaches</span></h2>
+          </div>
+          <div className="home-coaches-grid">
+            <article className="home-coach-card reveal">
+              <img src="/founder.jpg" alt="Sensai Divyamshi Pal" loading="lazy" />
+              <div className="home-coach-body">
+                <h3>Sensai Divyamshi Pal</h3>
+                <p className="home-coach-role">Owner &amp; Founder · MP Coach</p>
+                <ul className="home-coach-awards">
+                  <li>Maa Ahilya National Awardee</li>
+                  <li>Pride of MP Awardee</li>
+                  <li>Young Entrepreneurs Awardee</li>
+                </ul>
+              </div>
+            </article>
+            <article className="home-coach-card reveal reveal-delay-1">
+              <img src="/co-founder.jpg" alt="Sensai Harsh Chouhan" loading="lazy" />
+              <div className="home-coach-body">
+                <h3>Sensai Harsh Chouhan</h3>
+                <p className="home-coach-role">Co-Founder · MP Coach</p>
+              </div>
+            </article>
+          </div>
+          <div className="training-schedule reveal reveal-delay-2">
+            <div><span>Session Days</span><strong>Monday to Friday</strong></div>
+            <div><span>Morning Slot</span><strong>6:30 to 7:30 AM</strong></div>
+            <div><span>Evening Slot</span><strong>5:00 to 6:30 PM</strong></div>
+          </div>
+        </div>
+      </section>
+
       {/* ── PROGRAMS ── */}
       <section className="programs" id="programs">
         <div className="container">

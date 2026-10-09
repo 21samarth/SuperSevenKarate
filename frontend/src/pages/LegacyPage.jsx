@@ -72,30 +72,33 @@ export function LegacyPage() {
 
       <div className="master-card reveal animate-ready visible">
         <div class="master-photo-wrap">
-          <img src="/founder.jpg" alt="Sensei Divyanshi Pal" loading="lazy" style={{position:"absolute",objectFit:"contain"}}/>
+          <img src="/founder.jpg" alt="Sensai Divyamshi Pal" loading="lazy" style={{position:"absolute",objectFit:"contain"}}/>
           <div class="belt-ribbon"></div>
           <div class="dan-badge"><strong>Shodan</strong> Black Belt</div>
         </div>
         <div class="master-body">
-          <div class="master-name">Sensei Divyamshi Pal</div>
-          <div class="master-title">Owner & Founder</div>
+          <div class="master-name">Sensai Divyamshi Pal</div>
+          <div class="master-title">Owner & Founder · MP Coach</div>
           <div class="master-meta">
             <div class="master-meta-item"><div class="meta-icon">🎖️</div><div class="meta-text">4th Dan Black Belt — Shotokan</div></div>
             <div class="master-meta-item"><div class="meta-icon">⏳</div><div class="meta-text">17+ Years of Experience</div></div>
             <div class="master-meta-item"><div class="meta-icon">🏆</div><div class="meta-text">FSKAIF Certified Head Coach</div></div>
+            <div class="master-meta-item"><div class="meta-icon">🏅</div><div class="meta-text">Maa Ahilya National Awardee</div></div>
+            <div class="master-meta-item"><div class="meta-icon">🏅</div><div class="meta-text">Pride of MP Awardee</div></div>
+            <div class="master-meta-item"><div class="meta-icon">🏅</div><div class="meta-text">Young Entrepreneurs Awardee</div></div>
           </div>
         </div>
       </div>
 
       <div className="master-card reveal reveal-delay-1 animate-ready visible">
         <div class="master-photo-wrap">
-          <img src="/co-founder.jpg" alt="Sensei Harsh Chouhan" loading="lazy" style={{position:"absolute",objectFit:"contain"}}/>
+          <img src="/co-founder.jpg" alt="Sensai Harsh Chouhan" loading="lazy" style={{position:"absolute",objectFit:"contain"}}/>
           <div class="belt-ribbon"></div>
           <div class="dan-badge"><strong>Shodan</strong> Black Belt</div>
         </div>
         <div class="master-body">
-          <div class="master-name">Sensei Harsh Chouhan</div>
-          <div class="master-title">Co-Founder</div>
+          <div class="master-name">Sensai Harsh Chouhan</div>
+          <div class="master-title">Co-Founder · MP Coach</div>
           <div class="master-meta">
             <div class="master-meta-item"><div class="meta-icon">🎖️</div><div class="meta-text">5th Dan Black Belt — Shotokan</div></div>
             <div class="master-meta-item"><div class="meta-icon">⏳</div><div class="meta-text">35+ Years of Experience</div></div>
@@ -192,6 +195,7 @@ export function LegacyPage() {
               <div className="student-body">
                 <div className="student-name">Aarav Manjrekar</div>
                 <div className="student-rank">Black Belt &mdash; 1st Dan</div>
+                <div className="student-achievement"><div className="student-achievement-icon">🏅</div><div className="student-achievement-text">National Medalist</div></div>
               </div>
             </div>
       

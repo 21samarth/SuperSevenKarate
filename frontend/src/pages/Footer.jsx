@@ -55,7 +55,7 @@ export function Footer() {
                 </div>
                 <div className="contact-item">
                   <div className="contact-item-icon">⏰</div>
-                  <div className="contact-item-text">Mon–Sat: 6 AM – 9 PM<br />Sun: 7 AM – 12 PM</div>
+                  <div className="contact-item-text">Monday to Friday<br />6:30 to 7:30 AM &amp; 5:00 to 6:30 PM</div>
                 </div>
               </div>
             </div>
