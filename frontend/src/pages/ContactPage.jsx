@@ -37,7 +37,7 @@ export function ContactPage() {
                 <div className="contact-detail-icon">📍</div>
                 <div>
                   <div className="contact-detail-label">Address</div>
-                  <div className="contact-detail-value"> 394,Premium Paradise, Sanwer Road Industrial Area<br />Indore, Madhya Pradesh 452010</div>
+                  <div className="contact-detail-value"> 394,Premium Paradise, Sanwer Road Industrial Area<br />Indore, Madhya Pradesh 453555</div>
                 </div>
               </div>
       

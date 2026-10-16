@@ -43,7 +43,7 @@ export function Footer() {
               <div className="contact-info">
                 <div className="contact-item">
                   <div className="contact-item-icon">📍</div>
-                  <div className="contact-item-text"> 394,Premium Paradise, Sanwer Road Industrial Area<br />Indore, MP 452010</div>
+                  <div className="contact-item-text"> 394,Premium Paradise, Sanwer Road Industrial Area<br />Indore, MP 453555</div>
                 </div>
                 <div className="contact-item">
                   <div className="contact-item-icon">📞</div>

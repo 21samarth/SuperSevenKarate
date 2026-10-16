@@ -108,6 +108,10 @@ body {
     display: block;
     transition: transform 0.45s ease;
 }
+.student-photo-wrap {
+    position: relative;
+    overflow: hidden;
+}
 img { max-width: 100%; display: block; }
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
@@ -2278,6 +2282,10 @@ footer {
   .journey-step { padding: 24px 18px; }
   .journey-step-title { font-size: 0.85rem; }
   .journey-step-desc  { font-size: 0.8rem; }
+
+  /* Keep rank labels clear of the students' faces on phone screens. */
+  .students-grid { grid-template-columns: 1fr; gap: 20px; }
+  .belt-level-badge { top: auto; bottom: 14px; }
 
   /* ── Contact page ── */
   .contact-section { padding: 50px 0; }
