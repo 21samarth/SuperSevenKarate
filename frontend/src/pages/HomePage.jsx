@@ -52,7 +52,7 @@ export function HomePage() {
               </div>
               <div className="floating-badge top-right">
                 <div className="fb-label">Rank</div>
-                <div className="fb-value">4th Dan</div>
+                <div className="fb-value">Shodan black belt</div>
               </div>
               <div className="floating-badge bottom-left">
                 <div className="fb-label">Style</div>
